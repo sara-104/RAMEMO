@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/css/signup.css">
+<script src="../static/javascript/preview_img.js"></script>
+{% extends "base.html" %}
+{% block content %}
+<div class="container1">
+    <div class="item1">
+        <h1>アカウント作成</h1>
+    </div>
+    <div class="item2">
+    <form method="POST">
+        <div class="item3"><label for="">メールアドレス</label></div>
+        <div class="item4"><input type="text" autofocus name="username" class="form-control" placeholder="例:aaa@aaa" autofocus required></div>
+        <div class="item3"><label for="">パスワード</label></div>
+        <div class="item4"><input type="password" autofocus name="password" class="form-control" placeholder="例:123abc" autofocus required></div>
+        <div class="item5"><input type="submit" value="作成" class="button"></div>
+    </form>
+    </div>
+    <div class="reset">
+        <a class="akaunt">アカウントをお持ちですか？</a><a href="/login">ログイン</a>
+    </div>
+</div>
+{% endblock %}

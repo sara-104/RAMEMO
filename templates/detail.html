@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/static/css/detail.css">
+<script src="../static/javascript/preview_img.js"></script>
+{% extends "base.html" %}
+{% block content %}
+<div class="ramen">
+    <form method="GET">
+        <div class="ramen-item">
+                <img src="{{ image }}" class="img-top" width="300px"  alt="...">
+        </div>
+        <div class="ramen-i">
+                <div class="ramen-box">
+                    <div class="ramen-a">
+                        <h3>{{ post.shop }}</h3>
+                    </div>
+                    <div class="ramen-b">
+                        <!-- <i class="fa-solid fa-ellipsis"></i> -->
+                    </div>
+                </div>
+                <div class="ramen-box">
+                    <div class="ramen-c">
+                        <p>{{ post.adress }}</p>
+                    </div>
+                    <div class="ramen-d">
+                            {% if  post.rating == 1 %}
+                            <h5 class="text-warning"><span class="text-body"></span>★</h5>
+                            {% elif  post.rating == 2 %}
+                            <h5 class="text-warning"><span class="text-body"></span>★★</h5>
+                            {% elif  post.rating == 3 %}
+                            <h5 class="text-warning"><span class="text-body"></span>★★★</h5>
+                            {% elif  post.rating == 4 %}
+                            <h5 class="text-warning"><span class="text-body"></span>★★★★</h5>
+                            {% elif  post.rating == 5 %}
+                            <h5 class="text-warning"><span class="text-body"></span>★★★★★</h5>
+                            {% endif %}
+                    </div>
+                </div>
+                <div class="ramen-box">
+                    <div class="ramen-e">
+                        <p>{{ post.item }}</p>
+                    </div>
+                    <div class="ramen-e">
+                        <p>￥{{ post.price }}</p>
+                    </div>
+                </div>
+                <div class="ramen-box">
+                    <div class="ramen-g">
+                        
+                    </div>
+                    <div class="ramen-g">
+                        <p>{{ post.date }}</p>
+                    </div>
+                </div>
+                <div class="ramen-f">
+                        <p>メモ</p>
+                        <p>{{ post.memo }}</p>
+                </div>
+        </div>
+        <div class="delete-container">
+                <div class="update"><i class="fa-regular fa-pen-to-square"></i><a href="/{{post.id}}/update" class="update1" role="button">編集</a></div>
+                <div class="delete"><i class="fa-regular fa-trash-can"></i><a href="/{{post.id}}/delete" class="delete1" role="button">削除</a></div>
+        </div>
+    </form>
+</div>
+<script src="../static/js/base.js"></script>
+{% endblock %}

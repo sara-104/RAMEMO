@@ -1,0 +1,71 @@
+.item1{
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+.item3{
+    margin-bottom: 5px;
+    font-size: larger;
+}
+.item4{
+    margin-bottom: 10px;
+}
+input.form-control{
+    width: 100%;
+    font: 15px/24px 'MOBO',sans-serif;
+	box-sizing: border-box;
+	margin: 5px 0;
+	padding: 12px;
+	transition: 0.3s;
+	border: 2px solid #333;
+	border-radius: 9px;
+	outline: none;
+    font-size: large;
+}
+.container1{
+    height: auto;
+}
+.item1  h1{
+    font-size: 25px;
+    text-align: left;
+    font-weight: 700;
+}
+input:required{background:#FFFDF5;}
+input:valid{background: transparent;} /* 入力内容が正しかった場合の指定 */
+
+input.button{
+    display: block;
+    font-size: large;
+	text-align: center;
+	
+	text-decoration: none;
+	width: 100%;
+	margin: auto;
+	padding: 12px;
+	font-weight: bold;
+	border: 2px solid #F21D1D;
+	background: #F21D1D;
+	color: #FFFDF5;
+	border-radius: 9px;
+	transition: 0.5s;
+    font: 15px/24px 'MOBO',sans-serif;
+
+}
+.button:hover {
+	color: #F21D1D;
+	background: #FFFDF5;
+}
+.item5{
+    margin-top: 40px;
+}
+.reset{
+    text-align: center;
+    margin-top: 50px;
+}
+a{
+    text-decoration: none;
+    color: #F2B81E;
+    font-weight: normal;
+}
+a.akaunt {
+    color: #333;
+}

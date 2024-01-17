@@ -1,0 +1,250 @@
+body{
+    background-color: #FFFDF5;
+    height: 100%;
+    font-family: 'MOBO', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  header{
+    height: 50px;
+  }
+  footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .header-list{
+    display: flex;
+    position: fixed;
+  }
+  header h1{
+    margin-top: 5px;
+    color: #F21D1D;
+  }
+  /*============
+  nav
+  =============*/
+  nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #f53c08;
+    overflow-y: auto;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    z-index: 4;
+    opacity: 0;
+    width: 100%;
+    right: -100%;
+  }
+  .open nav {
+    right:0;
+    opacity: 1;
+    z-index: 4;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+  }
+  nav .inner {
+    padding: auto;
+    margin: 0 ;
+  }
+  nav .inner ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 100px;
+    width: auto;
+    margin: 50;
+  }
+  nav .inner ul li {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  nav .inner ul li a {
+    display: block;
+    color: #FFFDF5;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 1em;
+    text-decoration: none;
+  }
+.nav-item a::after{
+  content: "";
+  display: block;
+  margin: 6px auto 0;
+  width: 0;
+  border-bottom: 4px solid #FFFDF5;
+  transition: width 0.3s ease-in-out;
+}
+ li.nav-item a:hover::after{
+  width: 100%;
+}
+  @media screen {
+    nav {
+      right: -100%;
+      width: 100%;
+    }
+  }
+  /*============
+  .toggle_btn
+  =============*/
+  .toggle_btn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #F21D1D;
+    border-radius: 4px;
+    transition: all .5s;
+  }
+  .toggle_btn span:nth-child(1) {
+    top: 4px;
+  }
+  .toggle_btn span:nth-child(2) {
+    top: 14px;
+  }
+  .toggle_btn span:nth-child(3) {
+    bottom: 4px;
+  }
+  .open .toggle_btn span {
+    background-color: #FFFDF5;
+  }
+  .open .toggle_btn span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+  }
+  .open .toggle_btn span:nth-child(2) {
+    opacity: 0;
+  }
+  .open .toggle_btn span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+  }
+  
+  main {
+    padding: 0px 20px;
+    height: 900px;
+    color: #333;
+  }
+  main h1 {
+    font-family: 'MOBO', sans-serif;
+    /* font-weight: 400; */
+    text-align: center;
+    margin: 10px 0;
+  }
+  .navArea{
+    height: 70px;
+    position: fixed;
+  }
+
+  /*========= 検索窓を開くためのボタン設定 ===========*/
+
+.open-btn1{
+  position: absolute;
+  position: fixed;
+  top:10px;
+  right:60px;
+  background:url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_search.svg") no-repeat 20px center;/*虫眼鏡アイコンを背景に表示*/
+  background-size: 27px 27px;
+  width:50px;
+  height:50px;
+  cursor: pointer;/*カーソルを指マークに*/
+}
+
+/*クリック後、JSでボタンに btnactive クラスが付与された後の見た目*/
+.open-btn1.btnactive{
+  background:url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_close.svg") no-repeat 20px center;/*閉じるアイコンを背景に表示*/
+  background-size: 20px 20px;
+}
+
+/*========= 検索窓の設定 ===============*/
+
+/*==検索窓背景のエリア*/
+
+#search-wrap{
+  position:absolute;/*絶対配置にして*/
+  top:50px;
+  right:0px;
+  padding: 5%;
+  height: auto;
+  z-index: -1;/*最背面に設定*/
+  opacity: 0;/*透過を0に*/
+  width:90%;/*横幅は0に*/
+  transition: all 0.6s;
+}
+
+/*ボタンクリック後、JSで#search-wrapに panelactive クラスが付与された後の見た目*/
+#search-wrap.panelactive{
+  opacity: 1;/*不透明に変更*/
+  z-index: 3;/*全面に出現*/
+  width:90%;
+  padding:5%;
+  position: fixed;
+  top: 50px;
+}
+
+/*==検索窓*/
+#search-wrap #searchform{
+  display: none;/*検索窓は、はじめ非表示*/
+}
+
+/*ボタンクリック後、JSで#search-wrapに panelactive クラスが付与された後*/
+#search-wrap.panelactive #searchform{
+  display: block;/*検索窓を表示*/
+}
+
+/*==検索フォームの設定*/
+
+/*==テキスト入力とボタンinput共通設定*/
+#search-wrap input{
+  outline: none;
+  cursor: pointer;/*カーソルを指マークに*/
+  color: #333;
+}
+
+/*テキスト入力input設定*/
+ #search-wrap input[type="text"] {
+  width: 100%;
+  border: solid 3px #F21D1D;
+  border-radius: 7px;
+  transition: all 0.5s;
+  letter-spacing: 0.05em;
+  padding: 12px;
+  font-family: 'MOBO', sans-serif;
+  box-shadow: 5px 5px 0 #f21d1d;
+}
+
+/*テキスト入力inputにフォーカスされたら*/
+ #search-wrap input[type="text"]:focus {
+  background:#FFFDF5;/*背景色を付ける*/
+}
+
+/*ボタンinput設定*/
+ #search-wrap input[type="submit"] {
+  position: absolute;
+  right:8%;
+  background:url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_search.svg") no-repeat right;/*虫眼鏡アイコンを背景に表示*/
+  background-size: 20px 20px;
+  width:30px;
+  height: 50px;
+  border:none
+}
+.inner img{
+  position: absolute;
+  right: -10vw;
+  bottom: 10vw;
+}

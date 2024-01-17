@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/static/css/index.css">
+<script src="../static/javascript/preview_img.js"></script>
+{% extends "base.html" %}
+{% block content %}
+<div id="loading">
+    <p>Loading...</p>
+</div>
+
+<div class="exp">
+    <p>これまでに記録したラーメン<a class="ramen_count">{{ ramen_count }}</a>杯</p>
+    <!-- <p>これまでに記録した店の数</p> -->
+</div>
+<div class="ramen">
+    {% for post in posts %}{% set A_list_loop = loop %}
+    {% for image in filebinary %}{% if loop.index==A_list_loop.index %}
+    <div class="ramen-item">
+        <div class="img-box"><a href="/{{ post.id }}/detail" class="btn btn-primary stretched-link">
+            <img src="{{ image }}" class="img-top"  alt="Uploaded Image">
+        </a></div>
+        <div class="ramen-i">
+            <div class="ramen-box">
+                <div class="ramen-b">
+                    <h3>{{ post.shop }}</h3>
+                </div>
+                <div class="ramen-b">
+                    <p>{{ post.adress }}</p>
+                </div>
+            </div>
+            <div class="ramen-box">
+                <div class="ramen-b">
+                    <p>{{ post.item }}</p>
+                </div>
+                <div class="ramen-b">
+                    {% if  post.rating == 1 %}
+                    <p class="text-warning"><span class="text-body"></span>★</p>
+                    {% elif  post.rating == 2 %}
+                    <p class="text-warning"><span class="text-body"></span>★★</p>
+                    {% elif  post.rating == 3 %}
+                    <p class="text-warning"><span class="text-body"></span>★★★</p>
+                    {% elif  post.rating == 4 %}
+                    <p class="text-warning"><span class="text-body"></span>★★★★</p>
+                    {% elif  post.rating == 5 %}
+                    <p class="text-warning"><span class="text-body"></span>★★★★★</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+</div>
+    <p>Copyright © sara</p>
+    <script src="../static/js/index.js"></script>
+{% endblock %}

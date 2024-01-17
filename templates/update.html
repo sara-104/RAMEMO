@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/static/css/update.css">
+<script src="../static/javascript/preview_img.js"></script>
+{% extends "base.html" %}
+{% block content %}
+<form method="POST">
+    <div class="container1">
+        <div class="item1">
+            <label for="shop">店名</label>
+            <input type="text" name="shop" value="{{ post.shop }}">
+        </div>
+        <div class="item1">
+            <label for="adress">住所</label>
+            <input type="text" name="adress" value="{{ post.adress }}">
+        </div>
+        <div class="item1">
+            <label for="name">商品名</label>
+            <input type="text" name="item" value="{{ post.item }}">
+        </div>
+        <div class="item1">
+            <label for="price">価格</label>
+            <input type="number" name="price" value="{{ post.price }}">
+        </div>
+        <div class="item1">
+            <label for="date">来店日時</label>
+            <input type="date" name="date" value="{{ post.date }}">
+        </div>
+        <div class="item1">
+            <label for="rating">ラーメンの評価</label>
+            <div class="rating-buttons">
+                <div class="star" onclick="setRating(1)">&#9733;</div>
+                <div class="star" onclick="setRating(2)">&#9733;</div>
+                <div class="star" onclick="setRating(3)">&#9733;</div>
+                <div class="star" onclick="setRating(4)">&#9733;</div>
+                <div class="star" onclick="setRating(5)">&#9733;</div>
+            </div>
+            <input type="hidden" name="rating" value="{{ post.rating }}" id="selected-rating">
+        </div>
+        <div class="item1">
+            <label for="memo">メモ</label>
+            <input type="text" name="memo" value="{{ post.memo }}" class="memo">
+        </div>
+        <div class="item2">
+            <input type="submit" value="編集する" class="kiroku">
+        </div>
+    </div>
+</form>
+<script src="../static/js/base.js"></script>
+<script src="../static/js/update.js"></script>
+{% endblock %}

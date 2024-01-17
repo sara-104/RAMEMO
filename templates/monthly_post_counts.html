@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="/static/css/monthly_post_counts.css">
+{% extends "base.html" %}
+{% block content %}
+<div class="graph">
+    {{ graph_html | safe }}
+</div>
+{% endblock %}
+<script src="../static/js/base.js"></script>

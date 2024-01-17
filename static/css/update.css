@@ -1,0 +1,69 @@
+.item1{
+    font-weight: light;
+}
+.item3{
+	height: 70px;
+}
+input{
+    width: 100%;
+    font: 15px/24px 'MOBO',sans-serif;
+	box-sizing: border-box;
+	margin: 5px 0;
+	padding: 12px;
+	transition: 0.3s;
+	border: 1px solid #515050;
+	border-radius: 9px;
+	outline: none;
+    font-size: large;
+}
+input.memo{
+    height: 70px;
+}
+
+.size{
+	color: rgba(81, 80, 80, 0.653);
+	font-size: 3rem;
+}
+button.kiroku{
+    display: block;
+    font-size: large;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	margin: auto;
+	padding: 12px;
+	font-weight: bold;
+	border: 2px solid #F21D1D;
+	background: #F21D1D;
+	color: #FFFDF5;
+	border-radius: 9px;
+	transition: 0.5s;
+    font: 15px/24px 'MOBO',sans-serif;
+
+}
+.button:hover {
+	color: #F21D1D;
+	background: #FFFDF5;
+}
+
+.kiroku{
+	margin-top: 20px;
+	background: #F21D1D;
+	color: #FFFDF5;
+	border: none;
+}
+
+.rating-buttons{
+	display: flex;
+	font-size: 45px;
+}
+
+.star {
+	cursor: pointer;
+	margin-right: 5px;
+	transition: color 0.3s;
+	color: #6e6e6e88;
+}
+.star.selected {
+	color: gold;
+}

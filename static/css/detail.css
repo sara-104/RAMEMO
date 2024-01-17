@@ -1,0 +1,130 @@
+.ramen-item{
+    width: auto;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    font-size: x-small;
+}
+.img-top{
+    border-radius: 10px;
+}
+.ramen-i{
+    margin-top: 10px;
+    font-size: larger;
+}
+i.fa-solid.fa-ellipsis{
+    font-size: 2rem;
+}
+.ramen{
+    width: 300px;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.img_top{
+    background-color: white;
+}
+.text-warning{
+    font-size: x-large;
+    margin: auto;
+    color: #F2B81E;
+}
+.ramen-box{
+    display: flex;
+    justify-content: space-between;
+}
+.ramen-a p{
+    margin: auto;
+    font-size: 5vw;
+}
+.ramen-a h3{
+    margin: auto;
+    font-size: 6vw;
+}
+.ramen-b{
+    margin: auto 0;
+}
+.ramen-c{
+    margin: auto 0;
+}
+.ramen-c p{
+    margin: auto 0;
+    font-size: 5vw;
+}
+.ramen-d{
+    text-align: left;
+
+}
+.ramen-d p{
+    margin: auto;
+    font-size: 4vw;
+}
+.ramen-d h5{
+    font-size: 5vw;
+}
+.ramen-e p{
+    margin: auto 0;
+    font-size: 5vw;
+}
+
+.ramen-f{
+    border-top:solid #cccccc 1px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.ramen-f p{
+    margin: auto 0;
+    font-size: 3.8vw;
+}
+.ramen-g p{
+    margin: auto 0;
+    font-size: 4vw;
+}
+.delete-container{
+    display: flex;
+    margin-top: 30px;
+}
+.update{
+	padding: 5px;
+	font-weight: bold;
+	border: 1.5px solid #333;
+	border-radius: 9px;
+	transition: 0.5s;
+    font-family:  'MOBO',sans-serif;
+    margin: 0 auto;
+    height: 30px;
+    width: 145px;
+    text-align: center;
+    margin-right: 10px;
+}
+.update i{
+    padding-right: 5px;
+    color: #333;
+}
+.update1{
+    text-decoration: none;
+    color: #333;
+    font-weight: lighter;
+}
+.delete{
+	padding: 5px;
+	font-weight: bold;
+	border: 1.5px solid #F21D1D;
+	border-radius: 9px;
+	transition: 0.5s;
+    font-family:  'MOBO',sans-serif;
+    margin: 0 auto;
+    height: 30px;
+    width: 145px;
+    text-align: center;
+}
+.delete i{
+    padding-right: 5px;
+    color: #F21D1D;
+}
+.delete1{
+    text-decoration: none;
+    color: #F21D1D;
+    font-weight: lighter;
+}

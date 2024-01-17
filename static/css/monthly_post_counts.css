@@ -1,0 +1,12 @@
+.graph{
+    width: 100%;
+    aspect-ratio: 1/1.5;
+    background-color: #FFFDF5 ;
+    margin-top: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+.user-select-none.svg-container{
+    z-index: 1;
+}
